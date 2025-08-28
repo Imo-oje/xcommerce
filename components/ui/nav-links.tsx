@@ -3,7 +3,11 @@ import clsx from "clsx";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
-export default function NavLinks({ setToggle }: { setToggle?: Function }) {
+export default function NavLinks({
+  setToggle,
+}: {
+  setToggle?: (value: boolean) => void;
+}) {
   const pathname = usePathname();
   const links = [
     {

@@ -1,7 +1,7 @@
 "use client";
 import { calculateDiscount, formatPrice } from "@/lib/utils";
 import { Property } from "@/types";
-import { ArrowLeftRight, Heart, Share, Share2 } from "lucide-react";
+import { ArrowLeftRight, Heart, Share2 } from "lucide-react";
 import Image from "next/image";
 
 export default function ProductCard({ property }: { property: Property }) {
