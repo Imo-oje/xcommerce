@@ -1,6 +1,6 @@
 export default function FloatingCard() {
   return (
-    <div className="absolute top-1/2 right-10 text-justify w-[calc(50%-3rem)] mt-auto mb-0 -translate-y-1/2 bg-secondary p-10">
+    <div className="absolute top-1/2 md:right-10 text-justify md:w-[calc(50%-3rem)] mt-auto mb-0 mx-4 -translate-y-1/2 bg-secondary p-10">
       <div className="flex flex-col items-start gap-4">
         <span>New Arrival</span>
         <h1 className="capitalize text-primary text-5xl font-semibold">

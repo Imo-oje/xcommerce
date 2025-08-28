@@ -3,7 +3,7 @@ import clsx from "clsx";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
-export default function NavLinks() {
+export default function NavLinks({ setToggle }: { setToggle?: Function }) {
   const pathname = usePathname();
   const links = [
     {
@@ -25,7 +25,7 @@ export default function NavLinks() {
   ];
 
   return (
-    <ul className="flex p-2 items-center justify-center gap-14">
+    <>
       {links.map((link) => (
         <Link
           key={link.path}
@@ -33,10 +33,15 @@ export default function NavLinks() {
           className={clsx("text-lg", {
             "text-primary": pathname === link.path,
           })}
+          onClick={() => {
+            if (pathname !== link.path && setToggle) {
+              setToggle(false);
+            }
+          }}
         >
           {link.name}
         </Link>
       ))}
-    </ul>
+    </>
   );
 }
